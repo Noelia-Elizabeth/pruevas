@@ -1,0 +1,239 @@
+html, body {
+  background: #538899;
+  height: 100%;
+}
+
+
+
+
+/* icono cohete */
+.circle{
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+
+  background: #151518;
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+.circle2{
+  width: 300px;
+  height: 300px;
+
+  position: relative;
+  top: 30%;
+  z-index: 2;
+
+  background: #2b379f;
+  border-radius: 50%;   
+}
+.rocket_container{
+  position: relative;
+  top: 40%;
+  left: 0%;    
+  z-index: 3;
+
+  animation: orbit 2.5s infinite ease-in-out;
+}
+svg{
+  height: 45px;
+  transform: rotate(-30deg);
+
+  position: relative;
+  top: 70%;
+  left: 30%;
+
+  animation: toRight 2.5s infinite ease-in-out;
+}
+@keyframes toRight {
+  0%   {left: 30%;}
+  25%  {left: 100%;}
+  50%  {left: 100%;}
+  100% {left: 30%; transform: rotate(-180deg);}
+}
+@keyframes orbit {
+  0%{ transform: rotate(0deg);}
+  50%{ transform: rotate(-150deg);}
+  100%{ transform: rotate(-220deg);}
+}
+
+
+
+
+/* sistema solar */
+.sistema_solar {
+  position: absolute;
+  left: -60px;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+}
+.sol{
+  background: lightblue;
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+}
+.planet{
+  background: white;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+.orbits {
+  border: 5px solid rgba(255, 255, 255, 0.12);
+  position: absolute;
+  border-radius: 100%;
+
+  animation: orbiting infinite linear;
+}
+.fondo{
+  background-color: #4640998a;
+  width: 1000px;
+  height: 1000px;
+  margin: -400px auto;
+
+  position: absolute;
+  
+  border-radius: 100%;
+}
+.planet_container{
+  height: 100%;
+}
+.orbit_1{
+  width: 300px;
+  height: 300px;
+  margin: -50px auto;
+
+  animation-duration: 10s;
+}
+.orbit_1 .planet{
+  margin: 5%;
+}
+.orbit_1 .planet_container{
+  transform:rotate(60deg);
+}
+.orbit_2{
+  width: 400px;
+  height: 400px;
+  margin: -100px auto;
+
+  animation-duration: 20s;
+}
+.orbit_2 .planet{
+  margin: 8%;
+}
+.orbit_3{
+  width: 500px;
+  height: 500px;
+  margin: -150px auto;
+
+  animation-duration: 15s;
+}
+.orbit_3 .planet{
+  margin-left: 22%;
+}
+.orbit_3 .planet_container{
+  transform:rotate(120deg);
+}
+@keyframes orbiting {
+  to{transform:rotate(360deg);}
+}
+
+
+/* lista de enlaces */
+.enlaces{
+  width: 400px;
+  position: absolute;
+  top: 250px;
+  left: 300px;
+
+  font-size: 2rem;
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+li{
+  margin: 7%;
+}
+ul :hover .line_container, ul :active .line_container{
+  padding-left: 0%;
+  padding-right: 0%;
+  transition: padding-right 0.5s, padding-left 0.5s;
+}
+.line{
+  height: 4px;
+  width: 100%;
+  border-radius: 100px;
+  background-color: white; 
+}
+.line_container{
+  padding-left: 50%;
+  padding-right: 50%;
+  transition: padding-right 0.5s, padding-left 0.5s;
+}
+
+
+
+
+/* boton registro */
+a{
+  text-decoration: none;
+  color: white;
+}
+.button{
+  height: 100px;
+  width: 300px;
+
+  z-index: 1;
+  
+  border-radius: 50px;
+  background-color: #464099;
+
+  display: flex;
+  justify-content: left;
+  margin-top: 20%;
+}
+.cohete{
+  height: 80px;
+  width: 80px;
+
+  position: relative;
+  top: 10%;
+  left: 3%;
+  z-index: 3;
+
+  background-color: #151518;
+  border-radius: 50px;
+
+  animation-name: example;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+.button  p{
+  position: relative;
+  top: 10%;
+  right: 10%;
+  z-index: 2;
+
+  font-size: 1.5rem; 
+}
+@keyframes example {
+  from {width: 80px;}
+  to {width: 280px;}
+}
+
+
+
+
+
+
+.notshow{
+  display: none;
+}
