@@ -1,91 +1,76 @@
 html, body {
-  background: #538899;
+  background: #538899 !important;
   height: 100%;
-
-  font-family: 'Montserrat', sans-serif;
-}
-
-
-
-
-/* icono cohete */
-.circle{
-  width: 300px;
-  height: 300px;
-  z-index: 1;
-
-  background: #151518;
-  border-radius: 50%;
 
   overflow: hidden;
 }
-.circle2{
-  width: 300px;
-  height: 300px;
-
-  position: relative;
-  top: 30%;
-  z-index: 2;
-
-  background: #2b379f;
-  border-radius: 50%;   
+header{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 50px 200px;
 }
-.rocket_container{
-  position: relative;
-  top: 40%;
-  left: 0%;    
-  z-index: 3;
+nav{
+  grid-column: 3;
 }
-#icono{
-  animation: orbit 2.5s infinite ease-in-out;
-}
-svg{
-  height: 45px;
-  transform: rotate(-30deg);
+.title{
+  grid-column: 1/4;
+  grid-row: 2;
+  height: 200px;
+  background-color: #151518;
 
-  position: relative;
-  top: 70%;
-  left: 30%;
-}
-#cohete{
-  animation: toRight 2.5s infinite ease-in-out;
-}
-@keyframes toRight {
-  0%   {left: 30%;}
-  25%  {left: 100%;}
-  50%  {left: 100%;}
-  100% {left: 30%; transform: rotate(-180deg);}
-}
-@keyframes orbit {
-  0%{ transform: rotate(0deg);}
-  50%{ transform: rotate(-150deg);}
-  100%{ transform: rotate(-220deg);}
-}
-
-
-
-
-/* sistema solar */
-.sistema_solar {
-  position: absolute;
-  left: -60px;
-  top: 20px;
   display: flex;
   justify-content: center;
-  margin-top: 20%;
+  align-items: center;
+  z-index: 20;
+}
+svg{
+  height: 100px;
+}
+.offcanvas-button{
+  height: 40px;
+  width: 40px;
+
+  margin-top: 10px;
+  margin-right: 10px;
+
+  background-color: rgba(255, 255, 255, 0);
+  border-style: hidden;
+
+  float: right;
+}
+.hamburger div{
+  height: 3px;
+  width: 22px;
+  border-radius: 2px;
+ 
+  margin: 15%;
+  background-color: white;
+}
+
+.menu{
+  height: 600px;
+}
+/* sistema solar */
+.sistema_solar {
+  margin-left: -95%;
+  margin-top: 60%;
+  display: flex;
+  justify-content: center;
+
+  position: relative;
 }
 .sol{
   background: lightblue;
   border-radius: 100%;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   z-index: 1;
 }
 .planet{
   background: white;
   border-radius: 100%;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
 }
 .orbits {
   border: 5px solid rgba(255, 255, 255, 0.12);
@@ -96,9 +81,9 @@ svg{
 }
 .fondo{
   background-color: #4640998a;
-  width: 1000px;
-  height: 1000px;
-  margin: -400px auto;
+  width: 600px;
+  height: 600px;
+  margin: -250px auto;
 
   position: absolute;
   
@@ -108,8 +93,8 @@ svg{
   height: 100%;
 }
 .orbit_1{
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   margin: -50px auto;
 
   animation-duration: 10s;
@@ -121,8 +106,8 @@ svg{
   transform:rotate(60deg);
 }
 .orbit_2{
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   margin: -100px auto;
 
   animation-duration: 20s;
@@ -131,8 +116,8 @@ svg{
   margin: 8%;
 }
 .orbit_3{
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
   margin: -150px auto;
 
   animation-duration: 15s;
@@ -181,89 +166,4 @@ ul :hover .line_container, ul :active .line_container{
   padding-left: 50%;
   padding-right: 50%;
   transition: padding-right 0.5s, padding-left 0.5s;
-}
-
-
-
-
-/* boton registro */
-a{
-  text-decoration: none;
-  color: white;
-}
-.button{
-  height: 100px;
-  width: 300px;
-
-  z-index: 1;
-  
-  border-radius: 50px;
-  background-color: #464099;
-
-  display: flex;
-  justify-content: left;
-  margin-top: 20%;
-}
-.button  p{
-  position: relative;
-  top: 10%;
-  right: -5%;
-  z-index: 2;
-
-  font-size: 1.5rem; 
-}
-
-
-.button .circle{
-  width: 80px;
-  height: 80px;
-  z-index: 1;
-
-  margin-top: 3%;
-  margin-left: 3%;
-
-  background: #151518;
-  border-radius: 50%;
-
-  overflow: hidden;
-}
-.button .circle2{
-  width: 80px;
-  height: 80px;
-
-  position: relative;
-  top: 30%;
-  z-index: 2;
-
-  background: #2b379f;
-  border-radius: 50%;   
-}
-.button .rocket_container{
-  position: relative;
-  top: 40%;
-  left: 0%;    
-  z-index: 3;
-}
-.button svg{
-  height: 11px;
-  transform: rotate(-30deg);
-
-  position: relative;
-  top: 70%;
-  left: 30%;
-}
-.button:hover .rocket_container{
-  animation: orbit 1s 1 ease-in-out;
-}
-.button:hover svg{
-  animation: toRight 1s 1 ease-in-out;
-}
-
-
-
-
-
-
-.notshow{
-  display: none;
 }
