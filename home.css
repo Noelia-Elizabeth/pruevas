@@ -1,6 +1,8 @@
 html, body {
   background: #538899;
   height: 100%;
+
+  font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -33,7 +35,8 @@ html, body {
   top: 40%;
   left: 0%;    
   z-index: 3;
-
+}
+#icono{
   animation: orbit 2.5s infinite ease-in-out;
 }
 svg{
@@ -43,7 +46,8 @@ svg{
   position: relative;
   top: 70%;
   left: 30%;
-
+}
+#cohete{
   animation: toRight 2.5s infinite ease-in-out;
 }
 @keyframes toRight {
@@ -200,33 +204,59 @@ a{
   justify-content: left;
   margin-top: 20%;
 }
-.cohete{
-  height: 80px;
-  width: 80px;
-
-  position: relative;
-  top: 10%;
-  left: 3%;
-  z-index: 3;
-
-  background-color: #151518;
-  border-radius: 50px;
-
-  animation-name: example;
-  animation-duration: 1.5s;
-  animation-iteration-count: infinite;
-}
 .button  p{
   position: relative;
   top: 10%;
-  right: 10%;
+  right: -5%;
   z-index: 2;
 
   font-size: 1.5rem; 
 }
-@keyframes example {
-  from {width: 80px;}
-  to {width: 280px;}
+
+
+.button .circle{
+  width: 80px;
+  height: 80px;
+  z-index: 1;
+
+  margin-top: 3%;
+  margin-left: 3%;
+
+  background: #151518;
+  border-radius: 50%;
+
+  overflow: hidden;
+}
+.button .circle2{
+  width: 80px;
+  height: 80px;
+
+  position: relative;
+  top: 30%;
+  z-index: 2;
+
+  background: #2b379f;
+  border-radius: 50%;   
+}
+.button .rocket_container{
+  position: relative;
+  top: 40%;
+  left: 0%;    
+  z-index: 3;
+}
+.button svg{
+  height: 11px;
+  transform: rotate(-30deg);
+
+  position: relative;
+  top: 70%;
+  left: 30%;
+}
+.button:hover .rocket_container{
+  animation: orbit 1s 1 ease-in-out;
+}
+.button:hover svg{
+  animation: toRight 1s 1 ease-in-out;
 }
 
 
