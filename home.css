@@ -141,7 +141,7 @@ svg{
 /* lista de enlaces */
 .enlaces{
   grid-row: 1/3;
-  min-width: 400px;
+  min-width: 300px;
   z-index: 10;
   margin-top: 15%;
 
@@ -155,7 +155,7 @@ svg{
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 0;
+  padding: 0 !important;
 }
 li{
   margin: 7%;
