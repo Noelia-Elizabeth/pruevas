@@ -31,9 +31,7 @@ section{
     margin-top: 100px;
     background-color: var(--fondoTargeta);
     border-radius: 50px;
-
     text-align: center;
-
     overflow: hidden;
 }
 section h2{
@@ -88,3 +86,5 @@ article .img{
     grid-column: 3/4;
     grid-row: 1/3;;
 }
+
+
