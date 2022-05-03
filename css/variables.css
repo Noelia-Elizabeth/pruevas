@@ -1,10 +1,11 @@
 :root {
     --boton_input: #464099;     /* fondo de botones, inputs y articles */
     --fondoTitulo: #46409996;   /* fondo del titulo para login, ingresar */
-    --fondoTituloHome: #151518;  /* fondo del titulo de home */
+    --fondoTituloHome: #151518f3;  /* fondo del titulo de home */
     --fondoTargeta: #1b138aa9;     /* fondo de la tarjeta del login, fondo de las secciones de home y fondo del sistema solar de home */
     --fondoTituloTargeta: #1b138a;  /* fondo del h2 en las secciones de home */
     --fondoLogo: #393386d0; 
+    --sol_planetas: #2f2b69;
     --texto1: #ffffff;   /* color de texto general */
     --texto2: #c9c9c9;   /* usado en links y placeholder */
 }
