@@ -32,11 +32,7 @@
   height: 25px;
 }
 .orbits {
-  
   border: 5px solid rgba(255, 255, 255, 0.12);
-  /*
-  border: 5px solid rgba(255, 255, 255, 0);
-  */
   position: absolute;
   border-radius: 100%;
 
