@@ -6,9 +6,8 @@
 ul {
     list-style-type: none;
     
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
-
     margin-left: 10px;
     
     display: grid;
@@ -21,19 +20,17 @@ li {
     height: 66px;
 
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
 #uno, #seis{
-    grid-column: 6/13;
+    grid-column: 5/13;
 }
 #dos, #cinco{
-    grid-column: 7/13;
+    grid-column: 6/13;
 }
 #tres, #cuatro{
-    grid-column: 8/13;
+    grid-column: 7/13;
 }
 #uno{
     grid-row: 1;
@@ -76,3 +73,100 @@ ul :active .line_container {
 }
 
 
+
+.sistema_solar {
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    top: 550px;
+    left: -40px;
+}
+
+.sol {
+    background: var(--sol_planetas);
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+.planet {
+    background: var(--sol_planetas);
+    border-radius: 100%;
+    width: 25px;
+    height: 25px;
+}
+
+.orbits {
+    border: 5px solid var(--orbitas);
+    position: absolute;
+    border-radius: 100%;
+
+    animation: orbiting infinite linear;
+}
+
+.fondo {
+    background-color: var(--fondoTargeta);
+    width: 195vw;
+    height: 195vw;
+    margin: -80vw;
+
+    position: absolute;
+    z-index: -1;
+    border-radius: 100%;
+}
+
+.planet_container {
+    height: 100%;
+}
+
+.orbit_1 {
+    width: 200px;
+    height: 200px;
+    margin: -50px auto;
+
+    animation-duration: 10s;
+}
+
+.orbit_1 .planet {
+    margin: 5%;
+}
+
+.orbit_1 .planet_container {
+    transform: rotate(60deg);
+}
+
+.orbit_2 {
+    width: 300px;
+    height: 300px;
+    margin: -100px auto;
+
+    animation-duration: 20s;
+}
+
+.orbit_2 .planet {
+    margin: 10%;
+}
+
+.orbit_3 {
+    width: 400px;
+    height: 400px;
+    margin: -150px auto;
+
+    animation-duration: 15s;
+}
+
+.orbit_3 .planet {
+    margin-left: 26%;
+}
+
+.orbit_3 .planet_container {
+    transform: rotate(120deg);
+}
+
+@keyframes orbiting {
+    to {
+        transform: rotate(360deg);
+    }
+}
