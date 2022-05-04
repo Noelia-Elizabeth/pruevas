@@ -1,5 +1,8 @@
 html{
-    background-image:  url('../img/fondo home.jpg');
+    background-image:  url('../img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    scroll-behavior: smooth;
 }
 header{
     grid-template-rows: 75px 200px;

@@ -3,21 +3,6 @@
     overflow: visible;
 }
 
-.circle{    /* este circulo es quien le da la forma a los links */
-    margin-left: -200px;
-    height: 400px;
-    width: 400px;
-    border-radius: 50%;
-    float: left;
-    shape-outside: circle();
-
-    background-color: transparent;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 ul {
     list-style-type: none;
     
@@ -26,22 +11,60 @@ ul {
 
     margin-left: 10px;
     
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
 }
 
 li {
-    margin-top: 20px;
+    margin-top: 5px;
+    height: 66px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+#uno, #seis{
+    grid-column: 6/13;
+}
+#dos, #cinco{
+    grid-column: 7/13;
+}
+#tres, #cuatro{
+    grid-column: 8/13;
+}
+#uno{
+    grid-row: 1;
+}
+#dos{
+    grid-row: 2;
+}
+#tres{
+    grid-row: 3;
+}
+#cuatro{
+    grid-row: 4;
+}
+#cinco{
+    grid-row: 5;
+}
+#seis{
+    grid-row: 6;
+}
+
 
 ul :hover .line_container,
 ul :active .line_container {
     padding-left: 0%;
     padding-right: 0%;
-    transition: padding-right 0.5s, padding-left 0.5s;
+    transition: padding-right 0.3s, padding-left 0.3s;
 }
 
 .line {
     height: 4px;
-    width: 100%;
+    width: inherit;
     border-radius: 100px;
     background-color: white;
 }
@@ -49,85 +72,7 @@ ul :active .line_container {
 .line_container {
     padding-left: 50%;
     padding-right: 50%;
-    transition: padding-right 0.5s, padding-left 0.5s;
+    transition: padding-right 0.3s, padding-left 0.3s;
 }
 
 
-
-.fondo{
-    background-color: var(--fondoTargeta);
-    width: 800px;
-    height: 800px;
-    position: absolute;
-    z-index: -1;
-    border-radius: 50%;
-}
-.sol{
-    background: var(--sol_planetas);
-    border-radius: 100%;
-    width: 100px;
-    height: 100px;
-}
-.planet {
-    background: var(--sol_planetas);
-    border-radius: 100%;
-    width: 25px;
-    height: 25px;
-
-    z-index: -1 !important;
-}
-.orbits {
-    border: 5px solid rgba(255, 255, 255, 0.12);
-    position: absolute;
-    border-radius: 100%;
-
-    animation: orbiting infinite linear;
-}
-.planet_container {
-    height: 100%;
-}
-
-.orbit_1 {
-    width: 200px;
-    height: 200px;
-    animation-duration: 10s;
-}
-.orbit_1 .planet {
-    margin: 6%;
-}
-
-.orbit_1 .planet_container {
-    transform: rotate(60deg);
-}
-
-.orbit_2 {
-    width: 300px;
-    height: 300px;
-
-    animation-duration: 20s;
-}
-
-.orbit_2 .planet {
-    margin: 10%;
-}
-
-.orbit_3 {
-    width: 400px;
-    height: 400px;
-
-    animation-duration: 15s;
-}
-
-.orbit_3 .planet {
-    margin-left: 26%;
-}
-
-.orbit_3 .planet_container {
-    transform: rotate(120deg);
-}
-
-@keyframes orbiting {
-    to {
-        transform: rotate(360deg);
-    }
-}
