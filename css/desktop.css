@@ -1,0 +1,66 @@
+@media (min-width: 1024px) {
+    header{
+        grid-template-rows: 150px 200px;
+    }
+    .movile_navbar{
+        display: none;
+    }
+    .desktop_navbar{
+        display: block;
+    }
+    main {
+        padding: 40px;
+        padding-top: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 100px
+    }
+    .sistema_solar{
+        top: 590px;
+    }
+    .fondo {
+        width: 100vw;
+        height: 100vw;
+        margin: -50vw;
+    }
+
+    #registrarse{
+        margin-top: 0;
+    }
+
+    #estaciones, #sponsors{
+        grid-column: 1/3;
+    }
+
+    section h2{
+        height: 110px;
+        font-size: 2rem;
+    }
+
+    #estaciones article{
+        grid-template-rows: 100% !important;
+    }
+    #estaciones article h3, #estaciones .derecha p{
+        grid-column: 1/2;
+    }
+    #estaciones article h3{
+        font-size: 1.5rem;
+        justify-content: center;
+    }
+    #estaciones article .img, #estaciones .derecha .img{
+        grid-column: 2/3;
+    }
+    #estaciones article p, #estaciones .derecha h3{
+        grid-column: 3/4;
+    }
+    #estaciones article p{
+        font-size: 1.1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #estaciones .derecha p, #estaciones .derecha h3{
+        grid-row: 1;
+    }
+}

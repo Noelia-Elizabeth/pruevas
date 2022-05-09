@@ -33,7 +33,7 @@ html{
     background-image:  url('../img/fondo.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover;
     scroll-behavior: smooth;
 }
 
@@ -104,7 +104,7 @@ button{
 
 .button .texto {
     position: relative;
-    top: -55%;
+    top: -64%;
     left: 13%;
     z-index: 2;
 
