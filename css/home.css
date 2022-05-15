@@ -1,31 +1,11 @@
+html{
+   
+    background-image:  url(../img/home/fondoHome.jpg);
+}
 header{
     grid-template-rows: 75px 200px;
 }
-nav{
-    grid-column: 1/4;
-}
-.desktop_navbar{
-    display: none;
 
-    background-color: var(--fondoMenuDesplegable);
-    height: 80%;
-    margin-top: -5px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-}
-.desktop_navbar ul{
-    padding-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-
-    font-size: 1.3rem;
-}
-.desktop_navbar img{
-    height: 70px;
-}
-.desktop_navbar a {
-    font-family: "Montserrat-MediumItalic", sans-serif;
-}
 .title{
     grid-column: 1/4;
     grid-row: 2;
@@ -40,32 +20,6 @@ nav{
 svg{
     height: 130px;
     margin: 5%;
-}
-
-
-main{
-    height: fit-content;
-    flex-direction: column;
-}
-section{
-    width: 100%;
-    margin-top: 100px;
-    background-color: var(--fondoTargeta);
-    border-radius: 50px;
-    text-align: center;
-    overflow: hidden;
-}
-section h2{
-    height: 80px;
-
-    margin-bottom: 5%;
-    background-color: var(--fondoTituloTargeta);
-
-    font-family: 'Montserrat-Black', sans-serif;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 .leermas{
     height: 50px;
@@ -146,12 +100,69 @@ article .img{
     justify-content: center;
     align-items: center;
 }
+
+
+#menu{
+    background-color: transparent;
+    overflow: visible;
+    height: 45vh;
+}
+#menu a{
+    font-family: 'Montserrat-MediumItalic', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+#menu ul {
+    list-style-type: none;
+    
+    font-size: 1.3rem;
+    text-align: center;
+    margin-left: 10px;
+    
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    position: absolute;
+}
+
+
+#uno, #seis{
+    grid-column: 5/13;
+}
+#dos, #cinco{
+    grid-column: 6/13;
+}
+#tres, #cuatro{
+    grid-column: 7/13;
+}
+#uno{
+    grid-row: 1;
+}
+#dos{
+    grid-row: 2;
+}
+#tres{
+    grid-row: 3;
+}
+#cuatro{
+    grid-row: 4;
+}
+#cinco{
+    grid-row: 5;
+}
+#seis{
+    grid-row: 6;
+}
+
 #estaciones .imgOrbit{
     border-style: hidden;
 }
 #estaciones img{
     height: 90%;
     border-radius: 0;
+}
+#estaciones .desktop{
+    display: none;
 }
 article h3, article p{
     grid-column: 2/4;
@@ -202,11 +213,13 @@ article h3{
     background: var(--sol_planetas); 
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--hamburger_scrolHandle);
+    background: var(--hamburger_scrolHandle_home);
 }
 ::-webkit-scrollbar-thumb:hover {
     background: var(--boton_input);
 }
+
+
 
 footer{
     height: 70px;
@@ -228,3 +241,4 @@ footer{
 .homecircle img{
     height: 30px;
 }
+
