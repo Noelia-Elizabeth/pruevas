@@ -86,7 +86,7 @@ nav{
 .desktop_navbar{
     display: none;
 
-    background-color: var(--fondoMenuDesplegable);
+    background-color: var(--fondoNavBar);
     height: 80%;
     margin-top: -5px;
     border-bottom-left-radius: 50px;
@@ -219,8 +219,8 @@ li {
 
 
 /* SUBRRAYADO */
-ul :hover .line_container,
-ul :active .line_container {
+.linea:hover .line_container,
+.linea:active .line_container {
     padding-left: 0%;
     padding-right: 0%;
     transition: padding-right 0.4s, padding-left 0.4s;
@@ -264,7 +264,7 @@ ul :active .line_container {
     border: 5px solid var(--orbitas);
     position: absolute;
     border-radius: 100%;
-
+    z-index: -4;
     animation: orbiting infinite linear;
 }
 .fondo {
@@ -423,4 +423,40 @@ ul :active .line_container {
 }
 .nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
     transform: rotate(-45deg);
+}
+
+
+footer{
+    height: 70px;
+    justify-content: flex-end;
+
+    z-index: 50;
+}
+.homecircle{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: var(--boton_input); 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homecircle img{
+    height: 30px;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--sol_planetas); 
+}
+::-webkit-scrollbar-thumb {
+    background: var(--hamburger_scrolHandle_home);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--boton_input);
 }
